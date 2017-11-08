@@ -7,7 +7,7 @@ The connection to the report server is done via the rsgateway.aspx.
 
 If reports have to be generated and stored automatically, the following issue arise:
 * Every generated report has the name rsgateway.aspx by default. 
-* Users have to rename and save the Report by themself
+* Users have to rename and save the Report by themself.
 
 This sample code shows how to:
 * Access the SQL report server directly from Aras
@@ -32,7 +32,7 @@ Internet Explorer 11, Chrome 61.0, Firefox ESR 52.4.0
 ## Usage
 
 1. Backup your database and store the BAK file in a safe place.
-2  Navigate to **Administration > Methods** in the table of contents (TOC).
+2. Navigate to **Administration > Methods** in the table of contents (TOC).
 3. Create a new Method (Server-side / C#)
 4. Insert sample code 
 5. Adjust the report settings inside the code
