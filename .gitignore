@@ -1,0 +1,8 @@
+# ignore logs
+Test\Logs\*.log
+Test/Logs/*.log
+
+Test\package\*
+Test/package/*
+
+add-ssrs-reports-to-vault/
