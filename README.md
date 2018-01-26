@@ -26,6 +26,8 @@ Aras 11.0 SP9
 #### Versions Tested:
 Aras 11.0 SP9
 
+SQL Server 2012
+
 #### Browsers Tested:
 Internet Explorer 11, Chrome 61.0, Firefox ESR 52.4.0
 
