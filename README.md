@@ -23,6 +23,8 @@ With some simple modifications it can easy be used in an Action or Form button o
 #### Built Using:
 Aras 11.0 SP9
 
+SQL Server 2012
+
 #### Versions Tested:
 Aras 11.0 SP9, 11.0 SP12
 
