@@ -24,7 +24,7 @@ With some simple modifications it can easy be used in an Action or Form button o
 Aras 11.0 SP9
 
 #### Versions Tested:
-Aras 11.0 SP9
+Aras 11.0 SP9, 11.0 SP12
 
 SQL Server 2012
 
