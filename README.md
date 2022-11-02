@@ -1,8 +1,8 @@
-# How to get files from the SSRS Report Server
+# Get report files from the SSRS Report Server and store them in new Document in Aras Innovator
 
 ## Description
 
-Aras offers the ability to create reports by using the SQL Server Reporting Services (SSRS).
+Aras Innovators offers the ability to create reports by using the SQL Server Reporting Services (SSRS).
 The connection to the report server is done via the rsgateway.aspx.
 
 If reports have to be generated and stored automatically, the following issue arise:
@@ -27,8 +27,10 @@ SQL Server 2012
 
 #### Versions Tested:
 Aras 11.0 SP9, 11.0 SP12
+Aras 12.0 SP7
 
 SQL Server 2012
+SQL Server 2022
 
 #### Browsers Tested:
 Internet Explorer 11, Chrome 61.0, Firefox ESR 52.4.0
