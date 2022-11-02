@@ -27,7 +27,7 @@ foreach (char c in xml.SelectSingleNode("//ReportingServices/Password").InnerTex
 }
 securedPW.MakeReadOnly();
 
-/* debug - define credentials manually
+/* debug - define credentials manually - Use this block for first tests
 string reportServerURL = "http://myreportserver/SSRS/";
 string reportUserDomain = "";
 string reportUser = "myuser";
@@ -38,8 +38,8 @@ string reportUserPW = "mypassword";
 string subfolder = "MYSUBFOLDER";
 string report = "PCBA_BOM"; // Name of .rdl
 string command = "Render";
-string format = "EXCEL";
-string fileExtension = "xls";
+string format = "EXCEL"; // for xlsx use "EXCELOPENXML"
+string fileExtension = "xls";  // xlsx
 
 // Get properties from request item
 Item myItem = inn.newItem("Part","get");
@@ -131,7 +131,7 @@ catch (Exception e)
 }
 
 // Create new Document 
-var docItem = inn.newItem("Document","add");
+Item docItem = inn.newItem("Document","add");
 docItem.setAttribute("doGetItem", "0");
 string sequenceVal = inn.getNextSequence("Default Document"); 
 docItem.setAttribute("useInputProperties", "1"); 
@@ -140,16 +140,18 @@ docItem.setProperty("name", "SSRS Report " + report + " " + fileString );
 docItem.setProperty("description", "This document was automatically generated.");
 
 // Create new Relationship and attach File
-var relItem = inn.newItem("Document File","add");
+Item relItem = inn.newItem("Document File","add");
 relItem.setAttribute("doGetItem", "0");
 relItem.setProperty("related_id",fileItem.getID());
 docItem.addRelationship(relItem) ;
-var resultItem = docItem.apply();
+
+// Execute query
+Item resultItem = docItem.apply();
 if (docItem.isError())
 {
     return inn.newError("An error occured: " + docItem.getErrorDetail() ); 
 } 
 
-var docId = resultItem.getID();
+string docId = resultItem.getID();
 
 return inn.newResult(docId); // id of new Document
